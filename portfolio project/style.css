@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@200;300;400;500&family=Ubuntu:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: azure;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
+  width: 100%;
+  background-color: black;
+  transition: top 0.3s;
+  position: fixed;
+  z-index: 1000;
+}
+nav ul {
+  display: flex;
+  font-family: "Poppins";
+}
+
+nav ul li:hover {
+  text-decoration: underline;
+}
+nav ul li {
+  list-style: none;
+  text-decoration: none;
+  margin-right: 25px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 17px;
+}
+.logo {
+  font-size: 30px;
+  font-family: "Dancing Script";
+  font-weight: 700;
+  cursor: pointer;
+  padding-left: 80px;
+}
+video {
+  height: 100vh;
+  object-fit: cover;
+}
+.background {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-left: 50px;
+  position: absolute;
+  z-index: -2;
+}
+
+nav ul li:hover a {
+  color: rgb(247, 0, 132);
+}
+
+.style {
+  font-size: 40px;
+  color: aliceblue;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding-left: 9em;
+}
+.title p {
+  font-size: 30px;
+  font-family: "Ubuntu";
+  line-height: 40px;
+}
+.title span {
+  margin-left: 20px;
+}
+.title h1 {
+  font-family: "Ubuntu";
+  width: 40%;
+  font-weight: 500;
+  padding-top: 10px;
+  font-size: 80px;
+  letter-spacing: 3px;
+  overflow: hidden;
+}
+/* animation: anime;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+@keyframes anime {
+    0%{color:azure}
+    100%{color:#0d62e6;}
+} */
+.about {
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+.about h1 {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: "Poppins";
+  font-weight: 200;
+  text-align: center;
+  color: rgb(247, 0, 132);
+}
+.about h1:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.about div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  padding-left: 7%;
+}
+.about div img {
+  width: 25%;
+  height: 25%;
+  border-radius: 20px;
+  border-width: 5px;
+  border-style: solid;
+  text-align: center;
+  border-color: rgb(247, 0, 132);
+}
+.about p {
+  margin-left: 10%;
+  display: inline;
+  align-self: flex-start;
+  height: 50%;
+  margin-right: 5%;
+  font-family: "Ubuntu";
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  line-height: 30px;
+}
+.about span {
+  font-size: 30px;
+}
+.link {
+  font-size: 20px;
+  color: aliceblue;
+}
+.link:hover {
+  color: deepskyblue;
+}
+.main {
+  width: 100%;
+  height: 150%;
+  background-color: rgb(0, 0, 0);
+  font-family: "Poppins";
+  padding-top: 10px;
+  display: grid;
+  place-items: center;
+}
+.main .heading {
+  font-size: 27px;
+  font-weight: 300;
+  color: rgb(106, 6, 236);
+  position: relative;
+}
+.heading::after {
+  position: absolute;
+  content: " ";
+  width: 50%;
+  height: 4px;
+  left: 50%;
+  bottom: -5px;
+  background-image: linear-gradient(
+    to right,
+    rgb(106, 6, 236),
+    rgb(220, 0, 240)
+  );
+  transform: translateX(-50%);
+}
+
+/* Container CSS Start  */
+
+.container {
+  width: 70%;
+  height: auto;
+  position: relative;
+}
+.container ul {
+  list-style: none;
+}
+.container ul::after {
+  position: absolute;
+  content: " ";
+  width: 2px;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(106, 6, 236),
+    rgb(220, 0, 240)
+  );
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.container ul li {
+  width: 50%;
+  height: auto;
+  background-color: transparent;
+  box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.284);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  z-index: 99;
+  position: relative;
+  padding: 20px;
+}
+.container ul li:nth-child(odd) {
+  float: left;
+  clear: right;
+  transform: translateX(-30px);
+  text-align: right;
+}
+.container ul li:nth-child(even) {
+  float: right;
+  clear: left;
+  transform: translateX(30px);
+}
+.container ul li:nth-child(4) {
+  margin-bottom: 0;
+}
+.container ul li .subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(106, 6, 236);
+}
+ul li p {
+  font-size: 15px;
+  color: rgb(220, 0, 240);
+  margin: 0px;
+  text-align: left;
+}
+ul li a {
+  font-size: 15px;
+  color: rgb(106, 6, 236);
+  text-decoration: none;
+}
+ul li .date {
+  position: absolute;
+  top: -48px;
+  width: 135px;
+  height: 35px;
+  border-radius: 20px;
+  color: #fff;
+  background-image: linear-gradient(
+    to right,
+    rgb(106, 6, 236),
+    rgb(220, 0, 240)
+  );
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.418);
+}
+.container ul li:nth-child(odd) .date {
+  right: 20px;
+}
+
+.container ul li .circle {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(220, 0, 240, 0.403);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+}
+.container ul li .circle::after {
+  content: " ";
+  width: 15px;
+  height: 15px;
+  background-color: rgb(106, 6, 236);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container ul li:nth-child(odd) .circle {
+  right: -30px;
+  transform: translate(50%, -50%);
+}
+.container ul li:nth-child(even) .circle {
+  left: -30px;
+  transform: translate(-50%, -50%);
+}
+.skill {
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.skill h1 {
+  text-align: center;
+  font-family: "Ubuntu";
+  font-weight: 400;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: rgb(247, 0, 132);
+}
+
+.skill h1:hover {
+  text-decoration: underline;
+}
+
+.skill p {
+  font-family: "Poppins";
+  font-size: 18px;
+  text-align: center;
+}
+
+.hbar {
+  border-radius: 20px;
+  width: 400px;
+  height: 10px;
+  background-image: linear-gradient(
+    to right,
+    rgb(106, 6, 236),
+    rgba(220, 0, 240, 0.403)
+  );
+}
+.cbar {
+  border-radius: 20px;
+  width: 400px;
+  height: 10px;
+  background-image: linear-gradient(
+    to right,
+    rgb(106, 6, 236),
+    rgba(220, 0, 240, 0.403)
+  );
+}
+.pbar {
+  border-radius: 20px;
+  width: 300px;
+  height: 10px;
+  background-image: linear-gradient(
+    to right,
+    rgb(106, 6, 236),
+    rgba(220, 0, 240, 0.403)
+  );
+}
+.jbar {
+  border-radius: 20px;
+  width: 350px;
+  height: 10px;
+  background-image: linear-gradient(
+    to right,
+    rgb(106, 6, 236),
+    rgba(220, 0, 240, 0.403)
+  );
+}
+.sbar {
+  border-radius: 20px;
+  width: 400px;
+  height: 10px;
+  background-image: linear-gradient(
+    to right,
+    rgb(106, 6, 236),
+    rgba(220, 0, 240, 0.403)
+  );
+}
+.rbar {
+  border-radius: 20px;
+  width: 300px;
+  height: 10px;
+  background-image: linear-gradient(
+    to right,
+    rgb(106, 6, 236),
+    rgba(220, 0, 240, 0.403)
+  );
+}
+
+.info p {
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+.skillCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px;
+  flex-wrap: wrap;
+}
+.skillCard {
+  height: 150px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 2px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.skillCard img {
+  height: 60px;
+  width: 60px;
+}
+
+.contact {
+  height: 100vh;
+  border-style: solid;
+  display: flex;
+  justify-content: space-around;
+  background-image: url("../material/3969587.jpg");
+  background-size: cover;
+}
+
+.details {
+  width: 50%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.details div {
+  width: 80%;
+  margin: 10px;
+}
+
+.details label {
+  font-family: sans-serif;
+  font-size: 15px;
+  display: block;
+  color: rgb(247, 0, 132);
+  margin: 10px;
+}
+
+.details input {
+  background-color: transparent;
+  border-color: rgb(247, 0, 132);
+  border-width: 2px;
+  border-radius: 10px;
+  border-style: solid;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+}
+
+.details h2 {
+  text-align: center;
+  color: blueviolet;
+  font-size: 20px;
+  font-family: sans-serif;
+  margin: 10px;
+}
+
+.details div button {
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: blueviolet;
+  border-style: none;
+  color: whitesmoke;
+  font-family: sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
